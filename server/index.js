@@ -58,6 +58,11 @@ app.post('/api/telemetry', async (req, res) => {
     }
 });
 
+// Health Check Endpoint
+app.get('/', (req, res) => {
+  res.send('IoT Backend is LIVE and Monitoring Factories 🚀');
+});
+
 // --- 4. START SERVER ---
 const PORT = process.env.SERVER_PORT || process.env.PORT || 5000;
 
